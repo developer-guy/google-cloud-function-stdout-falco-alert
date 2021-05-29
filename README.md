@@ -32,11 +32,11 @@ Once it's created, lets install `Falco`, and `Falcosidekick` with enabled `Googl
 we should clone the `developer-guy/charts1`, and deploy the `Falco` and `Falcosidekick` through this chart.
  Because the upstream Chart repository of the `Falcosecurity` does not involve the latest upgrades yet.
 
+> Don't forget to change [Chart.yaml](https://github.com/developer-guy/charts-1/blob/master/falco/Chart.yaml#L24) with the location of your working directory.
+
 ```bash
 $ git clone https://github.com/developer-guy/charts-1
 $ cd charts-1
-
-# Don't forget to change [Chart.yaml](https://github.com/developer-guy/charts-1/blob/master/falco/Chart.yaml#L24) with the location of your working directory.
 $ helm dependency update falco
 $ helm upgrade --install falco falco \
 --namespace falco --create-namespace \
