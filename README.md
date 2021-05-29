@@ -45,7 +45,7 @@ $ helm upgrade --install falco falco \
 --set falcosidekick.config.gcp.cloudfunctions.name=${CLOUD_FUNCTION_NAME} \
 --set falcosidekick.webui.enabled=true \
 --set falcosidekick.image.repository=falcosecurity/falcosidekick \
---set falcosidekick.image.tag=sha256:9bb460738633dd8b1bffce64dca4f8698940bc1d04f950eb8d15f19290ed7e13
+--set falcosidekick.image.tag=latest
 ```
 
 Finally set up the your SA and Rolebindings
