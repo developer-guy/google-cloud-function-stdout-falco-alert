@@ -10,7 +10,7 @@ To test workloadidentity first create a GCP cluster with workloadidentity enable
 
 ```bash
 $ GOOGLE_PROJECT_ID=$(gcloud config get-value project)
-$ CLUSTER_DEMO=demo
+$ CLUSTER_NAME=demo
 $ gcloud container clusters create $CLUSTER_NAME \
                    --workload-pool ${GOOGLE_PROJECT_ID}.svc.id.goog
 ```
