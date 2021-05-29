@@ -74,3 +74,16 @@ $ kubectl annotate serviceaccount \
   falco-falcosidekick \
   iam.gke.io/gcp-service-account=${SA_ACCOUNT}@${PROJECT_ID}.iam.gserviceaccount.com
 ```
+
+### Test
+
+Create an alpine pod first, then try to exec into it.
+
+```bash
+$ kubectl run alpine  --image=alpine --restart='Never' -- sh -c "sleep 600"
+```
+
+Exec into it.
+```bash
+$ kubectl exec -i --tty alpine -- sh -c "uptime" 
+```
