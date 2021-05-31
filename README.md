@@ -18,6 +18,8 @@ $ gcloud container clusters create $CLUSTER_NAME \
 Let's deploy the Google Cloud Functions first, because in the later steps, we'll need the name of the function.
 
 ```bash
+$ git clone https://github.com/developer-guy/google-cloud-function-stdout-falco-alert
+$ cd google-cloud-function-stdout-falco-alert
 $ gcloud functions deploy HelloWorld --runtime go113 --trigger-http
 Allow unauthenticated invocations of new function [HelloWorld]? (y/N)? N
 ...
