@@ -72,9 +72,9 @@ $ gcloud iam service-accounts add-iam-policy-binding \
 Finally set up the Falcosidekick SA to impersonate a GCP SA
 ```bash
 $ kubectl annotate serviceaccount \
-  --namespace $FALCO_NAMESPACE \
+  --namespace falco \
   falco-falcosidekick \
-  iam.gke.io/gcp-service-account=${SA_ACCOUNT}@${PROJECT_ID}.iam.gserviceaccount.com
+  iam.gke.io/gcp-service-account=${SA_ACCOUNT}@${GOOGLE_PROJECT_ID}.iam.gserviceaccount.com
 ```
 
 ### Test
