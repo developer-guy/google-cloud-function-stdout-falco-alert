@@ -6,7 +6,7 @@
 
 ### Tutorial
 
-To test workloadidentity first create a GCP cluster with workloadidentity enabled
+To test workloadidentity first create a GKE cluster with workloadidentity enabled
 
 ```bash
 $ GOOGLE_PROJECT_ID=$(gcloud config get-value project)
